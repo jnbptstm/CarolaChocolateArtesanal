@@ -13,9 +13,37 @@
 		gtag('config', 'UA-65616111-2');
 	</script>
 
+	<!-- Multi language-->
+	<script>
+		var language;
+		function getLanguage() {
+			(localStorage.getItem('language') == null) ? setLanguage('es') : false;
+			$.ajax({
+				url: '/language/' + localStorage.getItem('language') + '.json',
+				dataType: 'json', async: false, dataType: 'json',
+				success: function (lang) { language = lang }
+			});
+		}
+
+		function setLanguage(lang) {
+			localStorage.setItem('language', lang);
+		}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function () {
+			$('#nav-start').text(language.start);
+		});
+
+	</script>
+
 	<title>Carola - Chocolate Artesanal Mexicano</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta property="og:image" content="https://www.carolachocolateartesanal.com/images/bg_1.jpg" />
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
@@ -54,9 +82,11 @@
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+					<li class="nav-item active"><a href="index.html" id="nav-start" class="nav-link">Inicio</a></li>
 					<li class="nav-item"><a href="#story" class="nav-link">Historia</a></li>
 					<li class="nav-item"><a href="#products" class="nav-link">Productos</a></li>
+
+
 					<!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
 					<!-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> -->
 					<!-- <li class="nav-item dropdown">
@@ -71,6 +101,8 @@
 					</li> -->
 					<li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
 					<!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
+					<li class="nav-item"><a href="#" class="nav-link" onclick="setLanguage('en')">English</a></li>
+					<li class="nav-item"><a href="#" class="nav-link" onclick="setLanguage('es')">Spanish</a></li>
 				</ul>
 			</div>
 		</div>
