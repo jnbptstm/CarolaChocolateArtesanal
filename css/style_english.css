@@ -1,63 +1,63 @@
-.nav-link.french {
+.nav-link.english {
     display: block;
     padding: 0.5rem 1rem;
 }
 
 .nav-link.spanish,
-.nav-link.english {
+.nav-link.french {
     display: none;
 }
 
-.mb-4.french {
+.mb-4.english {
     display: block;
 }
 
 .mb-4.spanish,
-.mb-4.english {
+.mb-4.french {
     display: none;
 }
 
-.subheading.french {
+.subheading.english {
     display: block;
 }
 
 .subheading.spanish,
-.subheading.english {
+.subheading.french {
     display: none;
 }
 
-p.french {
+p.english {
     display: block;
 }
 
 p.spanish,
-p.english {
+p.french {
     display: none;
 }
 
-h3 a.french {
+h3 a.english {
     display: block;
 }
 
 h3 a.spanish,
-h3 a.english {
+h3 a.french {
     display: none;
 }
 
-.ftco-heading-2.french {
+.ftco-heading-2.english {
     display: block;
 }
 
 .ftco-heading-2.spanish,
-.ftco-heading-2.english {
+.ftco-heading-2.french {
     display: none;
 }
 
-.text-french {
+.text-english {
     display: block;
 }
 
 .text-spanish,
-.text-english {
+.text-french {
     display: none;
 }

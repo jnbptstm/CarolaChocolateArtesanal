@@ -3,30 +3,37 @@
     padding: 0.5rem 1rem;
 }
 
-.nav-link.french {
+.nav-link.french,
+.nav-link.english {
     display: none;
 }
 
-.mb-4.french {
+.mb-4.french,
+.mb-4.english {
     display: none;
 }
 
-.subheading.french {
+.subheading.french,
+.subheading.english {
     display: none;
 }
 
-p.french {
+p.french,
+p.english {
     display: none;
 }
 
-h3 a.french {
+h3 a.french,
+h3 a.english {
     display: none;
 }
 
-.ftco-heading-2.french {
+.ftco-heading-2.french,
+.ftco-heading-2.english {
     display: none;
 }
 
-.text-french {
+.text-french,
+.text-english {
     display: none;
 }
