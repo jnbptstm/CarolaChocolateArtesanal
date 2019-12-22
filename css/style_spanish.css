@@ -1,0 +1,32 @@
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link.french {
+    display: none;
+}
+
+.mb-4.french {
+    display: none;
+}
+
+.subheading.french {
+    display: none;
+}
+
+p.french {
+    display: none;
+}
+
+h3 a.french {
+    display: none;
+}
+
+.ftco-heading-2.french {
+    display: none;
+}
+
+.text-french {
+    display: none;
+}
