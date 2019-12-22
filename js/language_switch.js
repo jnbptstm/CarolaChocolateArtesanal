@@ -16,7 +16,7 @@ function getCookie(Name) {
 
 function setCookie(name, value, days) {
     var expireDate = new Date()
-    //set "expstring" to either future or past date, to set or delete cookie, respectively
+        //set "expstring" to either future or past date, to set or delete cookie, respectively
     var expstring = (typeof days != "undefined") ? expireDate.setDate(expireDate.getDate() + parseInt(days)) : expireDate.setDate(expireDate.getDate() - 5)
     document.cookie = name + "=" + value + "; expires=" + expireDate.toGMTString() + "; path=/";
 }
@@ -28,7 +28,8 @@ function deleteCookie(name) {
 
 function setStylesheet(title, randomize) { //Main stylesheet switcher function. Second parameter if defined causes a random alternate stylesheet (including none) to be enabled
     var i, cacheobj, altsheets = [""]
-    for (i = 0; (cacheobj = document.getElementsByTagName("link")[i]); i++) {
+    for (i = 0;
+        (cacheobj = document.getElementsByTagName("link")[i]); i++) {
         if (cacheobj.getAttribute("rel").toLowerCase() == "alternate stylesheet" && cacheobj.getAttribute("title")) { //if this is an alternate stylesheet with title
             cacheobj.disabled = true
             altsheets.push(cacheobj) //store reference to alt stylesheets inside array
@@ -69,8 +70,7 @@ if (manual_or_random == "manual") { //IF MANUAL MODE
     var selectedtitle = getCookie("mysheet")
     if (document.getElementById && selectedtitle != null) //load user chosen style sheet from cookie if there is one stored
         setStylesheet(selectedtitle)
-}
-else if (manual_or_random == "random") { //IF AUTO RANDOM MODE
+} else if (manual_or_random == "random") { //IF AUTO RANDOM MODE
     if (randomsetting == "eachtime")
         setStylesheet("", "random")
     else if (randomsetting == "sessiononly") { //if "sessiononly" setting
@@ -78,13 +78,11 @@ else if (manual_or_random == "random") { //IF AUTO RANDOM MODE
             document.cookie = "mysheet_s=" + setStylesheet("", "random") + "; path=/" //activate random alt stylesheet while remembering its "title" value
         else
             setStylesheet(getCookie("mysheet_s")) //just activate random alt stylesheet stored in cookie
-    }
-    else if (randomsetting.search(/^[1-9]+ days/i) != -1) { //if "x days" setting
+    } else if (randomsetting.search(/^[1-9]+ days/i) != -1) { //if "x days" setting
         if (getCookie("mysheet_r") == null || parseInt(getCookie("mysheet_r_days")) != parseInt(randomsetting)) { //if "mysheet_r" cookie is empty or admin has changed number of days to persist in "x days" variable
             setCookie("mysheet_r", setStylesheet("", "random"), parseInt(randomsetting)) //activate random alt stylesheet while remembering its "title" value
             setCookie("mysheet_r_days", randomsetting, parseInt(randomsetting)) //Also remember the number of days to persist per the "x days" variable
-        }
-        else
+        } else
             setStylesheet(getCookie("mysheet_r")) //just activate random alt stylesheet stored in cookie
     }
 }
