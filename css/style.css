@@ -9794,7 +9794,7 @@ h5,
     left: 0;
     right: 0;
     z-index: 3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 991.98px) {
@@ -11552,7 +11552,7 @@ textarea.form-control {
 .ftco-footer {
     font-size: 16px;
     padding: 7em 0;
-    background: #120f0f;
+    /* background: #120f0f; */
 }
 
 .ftco-footer .ftco-footer-logo {
