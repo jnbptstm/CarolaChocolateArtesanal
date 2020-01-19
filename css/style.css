@@ -9746,7 +9746,7 @@ body {
     line-height: 1.8;
     font-weight: 300;
     color: gray;
-    background: url(../images/bg_4.jpg) no-repeat fixed;
+    background: url(../images/bg_4.webp) no-repeat fixed;
     background-size: cover;
 }
 
@@ -10753,7 +10753,7 @@ h5,
 
 .pricing-entry .text h3 span {
     background: #151111;
-    background: url(../images/bg_4.jpg) no-repeat fixed;
+    background: url(../images/bg_4.webp) no-repeat fixed;
     padding-right: 20px;
 }
 
@@ -10762,7 +10762,7 @@ h5,
     color: #c49b63;
     text-align: right;
     background: #151111;
-    background: url(../images/bg_4.jpg) no-repeat fixed;
+    background: url(../images/bg_4.webp) no-repeat fixed;
     font-size: 16px;
 }
 
