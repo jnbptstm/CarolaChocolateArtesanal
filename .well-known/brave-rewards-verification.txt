@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: carolachocolateartesanal.com
-Token: 68c79da9b803a86d95b57df90b6671525282ed5a8b8dc9fb257c333d715562df
