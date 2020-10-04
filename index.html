@@ -55,12 +55,36 @@
 </head>
 
 <body>
+    <!-- <div id="fb-root"></div> -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div style="bottom:0px;right:0px;position:fixed;z-index:1;" id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v8.0'
+            });
+        };
 
-    <div id="fb-root"></div>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div style="bottom:0px;right:0px;position:fixed;z-index:1;" class="fb-customerchat" attribution=setup_tool page_id="113110093443441" logged_in_greeting="¡Hola! :)" logged_out_greeting="¡Hola! :)">
+    </div>
 
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+
         <div class="container">
+
             <!-- <a class="navbar-brand" href="index.html">Carola<small>Chocolate Artesanal</small></a> -->
             <!-- <img src="images/carolablancoFINAL.svg" class="navbar-brand" href="index.html" /> -->
             <img src="images/carolablancoFINAL.svg" width="413.6" height="96.8" href="index.html" alt="CarolaLogo" />
